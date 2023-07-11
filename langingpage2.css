@@ -2,11 +2,12 @@
    background-color:black; 
    color:#cda567;
    font-family: cursive;
+   font-size: 18px;
 }
 .container{
 
     display: grid;
-    grid-auto-rows:repet(5,2fr);
+    grid-auto-rows:repet(5,1fr);
     grid-template-areas:
      "na"
      "cot"
@@ -67,51 +68,74 @@
      
 }
 
-#mg{
-
-    width: 60%;
-    height:auto;
-}
-
 .con1{
-    grid-area:coc ;
-    
+    grid-area:coc ; width: 90%; margin: auto;
+    margin-top: 20%;
+    display: grid;
+    grid-template-areas: 
+    "mc la"
+    "bu la"
+    ;
+    grid-gap:10px;
+}
+.lab{
+    grid-area: la; width: 90%;
+   direction: rtl; text-align:start;
+
+}
+.lab p{
+    font-size: 2em; 
+}
+.lab span{
+    color:#f5dfbd;    font-family: cursive;
+
 }
 
-#mg1{
-    width: 50%;
-    height:400px;
-    margin-left:25%;
 
+#myCarousel{
+    grid-area: mc; width:550px; height: 500px;
+    border: #cda567 solid 1px;
+    border-radius: 10px 10px 10px 10px;   height: 500px;
+}
+#myCarousel img{
+    height: 300px;  width:80%;  margin: auto; margin-top: 18%;
+}
+.butt{
+    grid-area: bu;
+    margin-top: 10%;
 }
 
 .con2{
     grid-area:cob ;
-    
 }
-
+.soc{
+    height: 100px; 
+}
+.soc svg{
+    margin-top: 3%; 
+}
 #s :hover{
-    width:70px;
+    width:6%; 
 }
 
 #s1{
-    background-color:blue ; width:50px;
+    background-color:blue ; width:2%;
     border-radius: 50%; 
 }
 
 #s2{
-    background-color:green; width:50px;
+    background-color:green; width:2%;
     border-radius: 50%; 
 }
 
 #s3{
-    background-color:rgb(131, 6, 89); width:50px;
+    background-color:rgb(131, 6, 89); width:2%;
     border-radius: 30%; 
 
 }
 
 #s4{
-    background-color:blue ; width:50px;
+    background-color:blue ; width:2%;
     border-radius: 50%; 
     
 }
@@ -141,3 +165,28 @@
 }
 
 
+@media screen and (min-device-width : 200px) and (max-device-width : 480px){
+    #myPage{
+       font-size: 16px;
+    }
+
+    .con1{
+        grid-area:coc ; width: 90%; margin: auto;
+        margin-top: 20%;
+        display: grid;
+        grid-template-areas: 
+        "la"
+        "mc"
+        "bu"
+        ;
+        grid-gap:10px;
+    }
+
+    #myCarousel{
+     margin-top: 10%; width: 100%;
+    }
+    #myCarousel img{
+        height: 500px;  width:550px;
+        margin-left: 8%;
+    }
+}
